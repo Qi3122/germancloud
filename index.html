@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>德语发音单元词云</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>德语发音单元学习图谱</h1>
+      <p>首页采用词云交互方式呈现，并补充德语常用音标总览与发音规则。</p>
+    </header>
+
+    <main>
+      <section id="cloud-view" class="panel active" aria-label="发音词云">
+        <p class="cloud-tip">提示：点击任意词云节点进入二级示例页。</p>
+        <div id="cloud-canvas" role="list" aria-label="发音单元词云"></div>
+
+        <h3>德语常用音标总览（点击可发音）</h3>
+        <ul id="ipa-overview" class="item-list"></ul>
+      </section>
+
+      <section id="detail-view" class="panel" aria-live="polite">
+        <button id="back-btn" type="button">← 返回词云</button>
+        <h2 id="unit-title"></h2>
+        <p id="unit-hint"></p>
+
+        <div>
+          <h3>发音规则</h3>
+          <ul id="rule-list" class="item-list"></ul>
+        </div>
+
+        <div>
+          <h3>拼写示例（点击可发音）</h3>
+          <ul id="spelling-list" class="item-list"></ul>
+        </div>
+
+        <div>
+          <h3>单词示例（点击可发音）</h3>
+          <ul id="word-list" class="item-list"></ul>
+        </div>
+
+        <div>
+          <h3>场景示例（点击句子可发音）</h3>
+          <ul id="scene-list" class="item-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <template id="word-template">
+      <li>
+        <button class="speak-btn word"></button>
+        <span class="ipa-tag"></span>
+        <span class="cn-meaning"></span>
+      </li>
+    </template>
+
+    <template id="scene-template">
+      <li>
+        <button class="speak-btn sentence"></button>
+        <span class="cn-meaning"></span>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
