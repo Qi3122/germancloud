@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>德语国际音标与发音组合</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>德语国际音标（IPA）与字母发音组合</h1>
+      <p class="desc">首页按 IPA 列表展示，可直接点击发音；点击“进入场景”查看该发音组合的场景句与语法知识点。</p>
+    </header>
+
+    <main>
+      <section id="home-view" class="panel active">
+        <ul id="ipa-list" class="ipa-list"></ul>
+      </section>
+
+      <section id="detail-view" class="panel">
+        <button id="back-btn" type="button">← 返回 IPA 列表</button>
+        <h2 id="detail-title"></h2>
+        <p id="detail-hint" class="muted"></p>
+        <h3>场景化示例语句（句子可点击发音）</h3>
+        <ul id="scene-list" class="scene-list"></ul>
+      </section>
+    </main>
+
+    <template id="scene-template">
+      <li class="scene-item">
+        <div class="scene-top">
+          <button class="speak-btn sentence-btn"></button>
+          <span class="muted cn"></span>
+        </div>
+        <div class="grammar-tags"></div>
+      </li>
+    </template>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

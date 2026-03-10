@@ -1,0 +1,162 @@
+:root {
+  --bg: #f6f8fc;
+  --card: #fff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --pri: #2563eb;
+  --pri-soft: #dbeafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+header,
+main {
+  width: min(1080px, 94vw);
+  margin: 0 auto;
+}
+
+header {
+  padding: 1.2rem 0 0.7rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.desc {
+  color: var(--muted);
+  margin: 0.4rem 0 0;
+}
+
+.panel {
+  display: none;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.3rem;
+}
+
+.panel.active {
+  display: block;
+}
+
+.ipa-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.ipa-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.ipa-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+  margin-bottom: 0.55rem;
+}
+
+.speak-btn,
+.detail-btn,
+.combo-btn,
+#back-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.36rem 0.62rem;
+  cursor: pointer;
+}
+
+.speak-btn {
+  background: var(--pri);
+  color: #fff;
+}
+
+.detail-btn {
+  background: #111827;
+  color: #fff;
+}
+
+.combo-btn {
+  background: var(--pri-soft);
+  color: #1d4ed8;
+}
+
+.tag {
+  background: #f3f4f6;
+  border-radius: 999px;
+  padding: 0.12rem 0.48rem;
+  color: #374151;
+}
+
+.combo-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+#back-btn {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+#detail-title {
+  margin: 0.7rem 0 0.4rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.scene-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.scene-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem;
+}
+
+.scene-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  align-items: center;
+}
+
+.grammar-tags {
+  margin-top: 0.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.grammar {
+  font-size: 0.88rem;
+  background: #ecfeff;
+  color: #155e75;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
